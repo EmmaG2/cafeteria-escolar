@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/27" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fernandogranados.demo.controlador.HistorialVentasControlador">
+    <padding><Insets top="24" right="24" bottom="24" left="24" /></padding>
+    <top>
+        <VBox spacing="12">
+            <BorderPane.margin><Insets bottom="20" /></BorderPane.margin>
+            <Label text="Historial de ventas" styleClass="titulo-pantalla" />
+            <FlowPane hgap="12" vgap="12" styleClass="tarjeta">
+                <VBox spacing="4"><Label text="Desde" styleClass="campo-etiqueta" /><DatePicker fx:id="selectorFechaInicio" prefWidth="160" /></VBox>
+                <VBox spacing="4"><Label text="Hasta" styleClass="campo-etiqueta" /><DatePicker fx:id="selectorFechaFin" prefWidth="160" /></VBox>
+                <VBox spacing="4"><Label text="Estado" styleClass="campo-etiqueta" /><ComboBox fx:id="comboEstado" prefWidth="145" /></VBox>
+                <Button onAction="#filtrarVentas" styleClass="btn-primary" text="Filtrar" />
+                <Button onAction="#limpiarFiltros" text="Limpiar filtros" />
+            </FlowPane>
+        </VBox>
+    </top>
+    <center>
+        <HBox spacing="20">
+            <VBox spacing="12" HBox.hgrow="ALWAYS" minWidth="350">
+                <Label text="Recibos" styleClass="titulo-seccion" />
+                <ListView fx:id="listaVentas" styleClass="lista-tarjetas" VBox.vgrow="ALWAYS">
+                    <placeholder><Label text="No hay ventas para estos filtros." styleClass="estado-vacio" wrapText="true" /></placeholder>
+                </ListView>
+            </VBox>
+            <VBox spacing="12" prefWidth="410" minWidth="350" styleClass="tarjeta">
+                <Label text="Detalle del recibo" styleClass="titulo-seccion" />
+                <Label text="Precios cobrados al registrar la venta" styleClass="texto-secundario" />
+                <ListView fx:id="listaDetalles" styleClass="lista-tarjetas" VBox.vgrow="ALWAYS">
+                    <placeholder><Label text="Selecciona un recibo para ver sus productos." styleClass="estado-vacio" wrapText="true" /></placeholder>
+                </ListView>
+                <Separator />
+                <Label fx:id="etiquetaTotal" styleClass="valor-resumen" text="Total histórico: $0" />
+                <Button onAction="#cancelarVenta" styleClass="btn-danger" text="Cancelar venta seleccionada" maxWidth="Infinity" />
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>

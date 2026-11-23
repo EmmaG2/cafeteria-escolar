@@ -1,0 +1,338 @@
+/* Paleta fuente en HSL: consultar SISTEMA_DISENO.md.
+   JavaFX CSS no interpreta hsl(), por eso se usan los equivalentes indicados. */
+.root {
+    -fx-font-family: "System";
+    -fx-font-size: 14px;
+    -fx-background-color: #fcf8f4;
+    -fx-text-fill: #2e2723;
+}
+
+.label {
+    -fx-text-fill: #2e2723;
+}
+
+.vista {
+    -fx-background-color: #fcf8f4;
+}
+
+.titulo-pantalla {
+    -fx-font-size: 28px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #2e2723;
+}
+
+.titulo-seccion {
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+}
+
+.texto-secundario {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6e625b;
+}
+
+.barra-lateral {
+    -fx-background-color: #f4eee7;
+    -fx-border-color: transparent #d8cec5 transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+
+.marca {
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #7b3c23;
+}
+
+.barra-lateral .button {
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-color: transparent;
+    -fx-background-radius: 8px;
+    -fx-border-color: transparent;
+    -fx-text-fill: #2e2723;
+    -fx-font-weight: 600;
+    -fx-padding: 9px 10px;
+}
+
+.barra-lateral .button:hover,
+.barra-lateral .button:focused {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #7b3c23;
+}
+
+.button {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8px;
+    -fx-border-color: #d8cec5;
+    -fx-border-radius: 8px;
+    -fx-text-fill: #2e2723;
+    -fx-font-weight: 600;
+    -fx-padding: 8px 12px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #f4eee7;
+}
+
+.button:focused {
+    -fx-border-color: #7b3c23;
+}
+
+.btn-primary {
+    -fx-background-color: #7b3c23;
+    -fx-border-color: #7b3c23;
+    -fx-text-fill: white;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #622d18;
+    -fx-border-color: #622d18;
+}
+
+.btn-success {
+    -fx-background-color: #2c6d48;
+    -fx-border-color: #2c6d48;
+    -fx-text-fill: white;
+}
+
+.btn-success:hover {
+    -fx-background-color: #215537;
+    -fx-border-color: #215537;
+}
+
+.btn-danger {
+    -fx-background-color: #ad342e;
+    -fx-border-color: #ad342e;
+    -fx-text-fill: white;
+}
+
+.btn-danger:hover {
+    -fx-background-color: #892722;
+    -fx-border-color: #892722;
+}
+
+.boton-secundario {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #d8cec5;
+}
+
+.boton-icono .ikonli-font-icon,
+.barra-lateral .ikonli-font-icon {
+    -fx-icon-color: -fx-text-fill;
+}
+
+.tarjeta {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 12px;
+    -fx-border-color: #d8cec5;
+    -fx-border-radius: 12px;
+    -fx-padding: 16px;
+}
+
+.tarjeta-resumen {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 12px;
+    -fx-border-color: #d8cec5;
+    -fx-border-radius: 12px;
+    -fx-padding: 14px 16px;
+    -fx-pref-width: 190px;
+}
+
+.moneda {
+    -fx-text-fill: #7b3c23;
+}
+
+.periodo-contable {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6e625b;
+}
+
+.tarjeta-resumen .campo-etiqueta {
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #6e625b;
+}
+
+.valor-resumen {
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #7b3c23;
+}
+
+.campo-etiqueta {
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #6e625b;
+}
+
+/* Contorno pintado: las capas no participan en el cálculo del tamaño. */
+.combo-box,
+.text-field,
+.text-area,
+.date-picker {
+    -fx-background-color: #d8cec5, #ffffff;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 8px, 7px;
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+}
+
+.combo-box:focused,
+.text-field:focused,
+.text-area:focused,
+.date-picker:focused {
+    -fx-background-color: #7b3c23, #ffffff;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 8px, 6px;
+}
+
+/* Evitar un segundo contorno en los controles compuestos. */
+.date-picker > .text-field,
+.combo-box > .text-field {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-width: 0;
+}
+
+.date-picker > .text-field:focused,
+.combo-box > .text-field:focused {
+    -fx-background-color: #7b3c23, #ffffff;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 8px 0 0 8px, 6px 0 0 6px;
+}
+
+.text-area .scroll-pane,
+.text-area .scroll-pane .viewport,
+.text-area .content {
+    -fx-background-color: transparent;
+}
+
+.date-picker > .arrow-button {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+.lista-tarjetas {
+    -fx-background-color: transparent;
+    -fx-padding: 2px;
+    -fx-background-insets: 0;
+}
+
+.lista-tarjetas .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 0 4px 12px 0;
+    -fx-content-display: graphic-only;
+}
+
+.lista-tarjetas .list-cell:empty {
+    -fx-padding: 0;
+}
+
+.registro-tarjeta {
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 12px;
+    -fx-border-color: #d8cec5;
+    -fx-border-radius: 12px;
+    -fx-border-width: 1px;
+    -fx-padding: 16px;
+}
+
+.lista-tarjetas .list-cell:filled:hover .registro-tarjeta {
+    -fx-background-color: #fcf8f4;
+    -fx-border-color: #6e625b;
+}
+
+.lista-tarjetas .list-cell:filled:selected .registro-tarjeta {
+    -fx-background-color: #f4eee7;
+    -fx-border-color: #7b3c23;
+    -fx-border-width: 1px;
+}
+
+.lista-tarjetas:focused .list-cell:filled:focused .registro-tarjeta {
+    -fx-border-color: #7b3c23;
+    -fx-effect: dropshadow(gaussian, #d8cec5, 4, 0.2, 0, 1);
+}
+
+.emblema-tarjeta {
+    -fx-min-width: 44px;
+    -fx-pref-width: 44px;
+    -fx-max-width: 44px;
+    -fx-min-height: 44px;
+    -fx-pref-height: 44px;
+    -fx-max-height: 44px;
+    -fx-background-color: #f4eee7;
+    -fx-background-radius: 12px;
+}
+
+.emblema-tarjeta .ikonli-font-icon {
+    -fx-icon-size: 20px;
+    -fx-icon-color: #7b3c23;
+}
+
+.nombre-tarjeta {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2e2723;
+}
+
+.contexto-tarjeta, .descripcion-tarjeta {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6e625b;
+}
+
+.resumen-tarjeta {
+    -fx-alignment: CENTER_RIGHT;
+}
+
+.importe-tarjeta {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #7b3c23;
+}
+
+.insignia-tarjeta {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 4px 8px;
+    -fx-background-radius: 20px;
+}
+
+.estado-positivo {
+    -fx-background-color: #f4eee7;
+    -fx-text-fill: #2c6d48;
+}
+
+.estado-neutro {
+    -fx-background-color: #f4eee7;
+    -fx-text-fill: #6e625b;
+}
+
+.estado-negativo {
+    -fx-background-color: #f4eee7;
+    -fx-text-fill: #ad342e;
+}
+
+.estado-vacio {
+    -fx-text-fill: #6e625b;
+    -fx-padding: 24px;
+    -fx-text-alignment: center;
+    -fx-max-width: 300px;
+}
+
+.panel-grafica {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 12px;
+    -fx-border-color: #d8cec5;
+    -fx-border-radius: 12px;
+    -fx-padding: 12px;
+}
+
+.estado-conexion {
+    -fx-background-color: #e5f0e9;
+    -fx-background-radius: 8px;
+    -fx-padding: 6px 10px;
+    -fx-text-fill: #2c6d48;
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+}

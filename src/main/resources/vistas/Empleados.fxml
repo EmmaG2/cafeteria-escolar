@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/27" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fernandogranados.demo.controlador.EmpleadosControlador">
+    <padding>
+        <Insets top="24.0" right="24.0" bottom="24.0" left="24.0" />
+    </padding>
+    <top>
+        <Label text="Empleados" styleClass="titulo-pantalla">
+            <BorderPane.margin>
+                <Insets bottom="16.0" />
+            </BorderPane.margin>
+        </Label>
+    </top>
+    <center>
+        <VBox spacing="12">
+            <ListView fx:id="listaEmpleados" styleClass="lista-tarjetas" VBox.vgrow="ALWAYS">
+                <placeholder><Label text="Tu equipo aparecerá aquí. Registra un empleado." styleClass="estado-vacio" wrapText="true" /></placeholder>
+            </ListView>
+        </VBox>
+    </center>
+    <right>
+        <VBox prefWidth="320.0" spacing="12.0" maxHeight="-Infinity" BorderPane.alignment="TOP_RIGHT" styleClass="tarjeta">
+            <BorderPane.margin>
+                <Insets left="20.0" />
+            </BorderPane.margin>
+            <children>
+                <Label text="Datos del empleado" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+                <Label text="Nombre" />
+                <TextField fx:id="campoNombre" promptText="Nombre completo" />
+                <Label text="Puesto" />
+                <TextField fx:id="campoPuesto" promptText="Ej. Cajero" />
+                <CheckBox fx:id="casillaActivo" mnemonicParsing="false" selected="true" text="Empleado activo" />
+                <HBox spacing="8.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#guardarEmpleado" styleClass="btn-primary" text="Guardar" />
+                        <Button mnemonicParsing="false" onAction="#limpiarFormulario" text="Nuevo" />
+                        <Button mnemonicParsing="false" onAction="#eliminarEmpleado" styleClass="btn-danger" text="Eliminar" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </right>
+</BorderPane>
